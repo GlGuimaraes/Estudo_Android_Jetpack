@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Estudos</string>
+    <string name="termos_uso">Ao continuar você aceita nossa Política de Privacidade e Termos de Uso</string>
+    <string name="login_cadastro">Já tem uma conta? <font color="#80e49c">Login</font></string>
+</resources>

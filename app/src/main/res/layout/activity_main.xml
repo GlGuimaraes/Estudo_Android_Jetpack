@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="18dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/text_Hello"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Olá!"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/text_createAccount"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_Hello"
+        android:layout_centerHorizontal="true"
+        android:text="Crie sua conta"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_createAccount"
+        android:layout_marginTop="30dp"
+        app:hintTextColor="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:startIconDrawable="@drawable/person"
+        android:hint="Nome"
+        android:textColorHint="@color/white">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_email"
+        app:hintTextColor="@color/white"
+        app:boxStrokeColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_name"
+        android:hint="Email"
+        android:textColorHint="@color/white"
+        app:startIconDrawable="@drawable/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_password"
+        app:hintTextColor="@color/white"
+        app:boxStrokeColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_email"
+        android:hint="Senha"
+        android:textColorHint="@color/white"
+        app:endIconDrawable="@drawable/baseline_remove_red_eye_24"
+        app:startIconDrawable="@drawable/baseline_lock_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@null"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:layout_marginTop="10dp"
+        android:id="@+id/checkbox_termos_uso"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:buttonTintMode="@color/green"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_password"
+        android:text="@string/termos_uso" />
+
+    <Button
+        android:id="@+id/btn_cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkbox_termos_uso"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/green"
+        android:textSize="18dp"
+        android:text="Cadastrar"
+        android:textColor="#142318" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/btn_cadastrar"
+        android:layout_marginTop="58dp"
+        android:layout_toStartOf="@+id/txt_ou"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/txt_ou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_cadastrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="4dp"
+        android:text="ou"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/btn_cadastrar"
+        android:layout_marginTop="58dp"
+        android:layout_toEndOf="@+id/txt_ou"
+        android:background="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/txt_ou"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/login_cadastro"
+        android:textSize="22dp" />
+
+</RelativeLayout>
